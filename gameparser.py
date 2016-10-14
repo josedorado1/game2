@@ -42,9 +42,9 @@ def remove_punct(text):
     >>> remove_punct(",go!So.?uTh")
     'goSouTh'
     """
-  remove_punctuation = ""
+    remove_punctuation = ""
     for char in text:
-        if (not char.isalpha()):
+        if (not char.isalpha() and (not char.isspace())):
             char = ""
         remove_punctuation = remove_punctuation + char
     return remove_punctuation
